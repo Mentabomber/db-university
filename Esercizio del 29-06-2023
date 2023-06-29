@@ -75,5 +75,18 @@ WHERE departments.name LIKE "Dipartimento di Matematica";
 per ogni esame, stampando anche il voto massimo. Successivamente,
 filtrare i tentativi con voto minimo 18.
 
+SELECT students.*, exams.id 
+// COUNT(courses.id)
+FROM exams
+    join exam_student
+        on exams.id = exam_student.exam_id
+    join students
+        on exam_student.student_id = students.id
+    join courses
+        on exams.course_id = courses.id
+
+// GROUP BY 
+    
+
 
 
